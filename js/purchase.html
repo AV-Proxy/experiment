@@ -12,31 +12,27 @@ var bankBalance = 605.92;
 var amount = 0;
 
 function calcTax(amount) {
-    return amount * tax;
+  return amount * tax;
 }
 
 function format(amount) {
-    return "$" + amount.toFixed( 2 );
+  return "$" + amount.toFixed(2);
 }
 
 while (amount < bankBalance) {
-    amount = amount + phonePrice;
+  amount = amount + phonePrice;
 
-    if (amount < threshold) {
-        amount = amount + accessoryPrice;
-    }
+  if (amount < threshold) {
+    amount = amount + accessoryPrice;
+  }
 }
 
-amount = amount + calcTax( amount );
+amount = amount + calcTax(amount);
 
-console.log(
-    "Your purchase: " + format( amount )
-);
+console.log("Your purchase: " + format(amount));
 
 if (amount > bankBalance) {
-    console.log(
-        "You can't afford this purchase. :("
-    );
+  console.log("You can't afford this purchase.");
 }
 
 
