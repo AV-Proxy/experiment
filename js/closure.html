@@ -24,23 +24,36 @@ test3();
 var fn;
 
 function aaa() {
-    var a = 2;
+  var a = 2;
 
-    function ccc() {
-        console.log( a );
-    }
+  function bbb() {
+    console.log( a );
+  }
 
-    fn = ccc;
+  fn = bbb;
 }
 
-function bbb() {
+function ccc() {
     fn();
 }
 
 aaa();
 
-bbb();
+ccc();
 </script>
 
+<!-- EXAMPLE 3: -->
+<script>
+
+function wait(msg) {
+
+  setTimeout( function timer() {
+    console.log( msg );
+  }, 1000 );
+
+}
+
+wait( "Hello, closure!" );
+</script>
 </head>
 </html>
