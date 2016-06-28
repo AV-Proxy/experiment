@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
 
+<!-- EXAMPLE 1: -->
+<script>
 function test1() {
   var a = 2;
   
@@ -16,7 +17,30 @@ function test1() {
 var test3 = test1();
 
 test3();
-
 </script>
+
+<!-- EXAMPLE 2: -->
+<script>
+var fn;
+
+function aaa() {
+    var a = 2;
+
+    function ccc() {
+        console.log( a );
+    }
+
+    fn = ccc;
+}
+
+function bbb() {
+    fn();
+}
+
+aaa();
+
+bbb();
+</script>
+
 </head>
 </html>
