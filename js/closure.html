@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function test1() {
+  var a = 2;
+  
+  function test2() {
+    console.log( a );
+  }
+  
+  return test2;
+}
+
+var test3 = test1();
+
+test3();
+
+</script>
+</head>
+</html>
