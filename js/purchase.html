@@ -3,7 +3,6 @@
 <head>
 <script>
 
-const threshold = 450;
 const tax = 0.13;
 const phonePrice = 79.99;
 const accessoryPrice = 8.99;
@@ -22,7 +21,7 @@ function format(amount) {
 while (amount < bankBalance) {
   amount = amount + phonePrice;
 
-  if (amount < threshold) {
+  if (amount < bankBalance) {
     amount = amount + accessoryPrice;
   }
 }
@@ -32,7 +31,7 @@ amount = amount + calcTax(amount);
 console.log("Your purchase: " + format(amount));
 
 if (amount > bankBalance) {
-  console.log("You can't afford this purchase.");
+  console.log("You can't afford this purchase. (" + format(amount) + ")");
 }
 
 
