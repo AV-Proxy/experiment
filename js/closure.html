@@ -55,5 +55,32 @@ function wait(msg) {
 
 wait( "Hello, closure!" );
 </script>
+
+<!-- EXAMPLE 4: -->
+<script>
+
+function Module() {
+  var something = "cool";
+  var another = [1, 2, 3];
+
+  function doSomething() {
+    console.log( something );
+  }
+
+  function doAnother() {
+    console.log( another.join( " ! " ) );
+  }
+
+  return {
+    doSomething: doSomething,
+    doAnother: doAnother
+  };
+}
+
+var foo = Module();
+
+foo.doSomething(); 
+foo.doAnother(); 
+</script>
 </head>
 </html>
