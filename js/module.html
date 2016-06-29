@@ -4,25 +4,25 @@
 <script>
 
 var test = (function Module(id) {
-    function change() {
-        // modifying the public API
-        publicAPI.identify = identify2;
-    }
+  function change() {
+    // modifying the public API
+    publicAPI.identify = identify2;
+  }
 
-    function identify1() {
-        console.log( id );
-    }
+  function identify1() {
+    console.log( id );
+  }
 
-    function identify2() {
-        console.log( id.toUpperCase() );
-    }
+  function identify2() {
+    console.log( id.toUpperCase() );
+  }
 
-    var publicAPI = {
-        change: change,
-        identify: identify1
-    };
+  var publicAPI = {
+    change: change,
+    identify: identify1
+  };
 
-    return publicAPI;
+  return publicAPI;
 })( "test Module" );
 
 test.identify(); 
