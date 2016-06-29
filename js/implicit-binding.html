@@ -60,6 +60,7 @@ aaa(); // returns "global" instead of `2`, because `a` is defined in global scop
 
 <!-- EXAMPLE 4: -->
 <script>
+
 function test4() {
   console.log( this.a );
 }
@@ -76,6 +77,24 @@ var obj = {
 var a = "global"; // `a` also property on global object
 
 doTest4( obj.test4 ); // hence this returns "global" instead of `2`
+
+</script>
+
+<!-- EXAMPLE 5: -->
+<script>
+
+function test5() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  test5: test5
+};
+
+var a = "global"; // `a` also property on global object
+
+setTimeout( obj.test5, 100 ); // returns "global"
 </script>
 </head>
 </html>
