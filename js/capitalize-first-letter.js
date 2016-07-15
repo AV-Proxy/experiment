@@ -10,7 +10,6 @@ function capitalizeFirst(str) {
   str = str.join(" ");
   
   return str;    
-  }
+}
   
-
 capitalizeFirst("i'm a little tea pot");

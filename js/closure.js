@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<!-- EXAMPLE 1: -->
-<script>
+//--------- EXAMPLE 1: ---------
 function test1() {
   var a = 2;
   
   function test2() {
     console.log( a );
   }
-  
   return test2;
 }
 
 var test3 = test1();
-
 test3();
-</script>
+//------------------------------
 
-<!-- EXAMPLE 2: -->
-<script>
+
+//-------- EXAMPLE 2: ----------
 var fn;
 
 function aaa() {
@@ -29,7 +22,6 @@ function aaa() {
   function bbb() {
     console.log( a );
   }
-
   fn = bbb;
 }
 
@@ -38,27 +30,22 @@ function ccc() {
 }
 
 aaa();
-
 ccc();
-</script>
+//------------------------------
 
-<!-- EXAMPLE 3: -->
-<script>
 
+//--------- EXAMPLE 3: ---------
 function wait(msg) {
-
   setTimeout( function timer() {
     console.log( msg );
   }, 1000 );
-
 }
 
 wait( "Hello, closure!" );
-</script>
+//------------------------------
 
-<!-- EXAMPLE 4: -->
-<script>
 
+//--------- EXAMPLE 4: ---------
 function Module() {
   var something = "cool";
   var another = [1, 2, 3];
@@ -81,6 +68,4 @@ var foo = Module();
 
 foo.doSomething(); 
 foo.doAnother(); 
-</script>
-</head>
-</html>
+//------------------------------
