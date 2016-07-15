@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
-
-function bouncer(arr) {
-  
+function cleanUp(arr) {
   var newArray = [];
+  
   for (var i = 0; i < arr.length; i++) {
     if (arr[i]) {
       newArray.push(arr[i]);
@@ -15,8 +9,4 @@ function bouncer(arr) {
   return newArray;
 }
 
-bouncer([7, "ate", "", false, 9]);
-
-</script>
-</head>
-</html>
+cleanUp([7, "ate", "", false, 9]);

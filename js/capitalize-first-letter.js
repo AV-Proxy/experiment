@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
-
-function titleCase(str) {
+function capitalizeFirst(str) {
   
   str = str.toLowerCase();
   str = str.split(' ');
@@ -19,9 +13,4 @@ function titleCase(str) {
   }
   
 
-titleCase("i'm a little tea pot");
-
-
-</script>
-</head>
-</html>
+capitalizeFirst("i'm a little tea pot");
