@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
 function palindrome(str) {
-  
   str = str.replace(/[.*+?^${}()|[\]\\,_;:-]/g, '');
   str = str.replace(/\s/g, '');
   str = str.toLowerCase();
@@ -19,7 +13,3 @@ function palindrome(str) {
 }
 
 console.log(palindrome("My age is 0, 0 si ega ym."));
-
-</script>
-</head>
-</html>

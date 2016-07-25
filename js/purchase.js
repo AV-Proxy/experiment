@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
 const tax = 0.13;
 const phonePrice = 79.99;
 const accessoryPrice = 8.99;
@@ -33,8 +28,3 @@ console.log("Your purchase: " + format(amount));
 if (amount > bankBalance) {
   console.log("You can't afford this purchase. (" + format(amount) + ")");
 }
-
-
-</script>
-</head>
-</html>

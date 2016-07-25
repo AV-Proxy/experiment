@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
 var count = 0;
 
 function cc(card) {
@@ -38,7 +34,3 @@ cc(3);
 cc('K');
 cc('Q');
 cc('A');
-
-</script>
-</head>
-</html>

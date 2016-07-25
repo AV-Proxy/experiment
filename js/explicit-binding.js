@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- EXAMPLE 1: -->
-<script>
+//----- EXAMPLE 1: -----//
 
 function aaa1() {
   console.log( this.a );
@@ -24,10 +20,7 @@ setTimeout( bbb1, 100 ); // returns: 2
 
 bbb1.call( window ); // returns: 2
 
-</script>
-
-<!-- EXAMPLE2: --> 
-<script>
+//-----EXAMPLE2: -----// 
 
 function aaa2(something) {
   console.log( this.a, something );
@@ -50,11 +43,8 @@ var bbb2 = bind( aaa2, obj2 );
 var b2 = bbb2( 3 ); // returns: 2 3
 console.log( b2 ); // returns: 5
 
-</script>
-
-<!-- EXAMPLE3: -->
-<!-- 'ES5' build-in utility `Function.prototype.bind` -->
-<script>
+//----- EXAMPLE3: -----//
+//-----'ES5' build-in utility `Function.prototype.bind` -----//
 
 function aaa3(something) {
   console.log( this.a, something );
@@ -70,6 +60,3 @@ var bbb3 = aaa3.bind( obj3 );
 var b3 = bbb3( 3 ); // returns: 2 3
 console.log( b3 ); // returns: 5
 
-</script>
-</head>
-</html>

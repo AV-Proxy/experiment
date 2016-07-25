@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- EXAMPLE 1: -->
-<script>
+//----- EXAMPLE 1: -----//
 
 function test1() {
   console.log( this.a );
@@ -15,10 +11,7 @@ var obj = {
 
 obj.test1();
 
-</script>
-
-<!-- EXAMPLE 2: -->
-<script>
+//----- EXAMPLE 2: -----//
 
 function test2() {
   console.log( this.a );
@@ -36,10 +29,7 @@ var obj1 = {
 
 obj1.obj2.test2();
 
-</script>
-
-<!-- EXAMPLE 3: -->
-<script>
+//----- EXAMPLE 3: -----//
 
 function test3() {
   console.log( this.a );
@@ -56,10 +46,7 @@ var a = "global";
 
 aaa(); // returns "global" instead of `2`, because `a` is defined in global scope
 
-</script>
-
-<!-- EXAMPLE 4: -->
-<script>
+//----- EXAMPLE 4: -----//
 
 function test4() {
   console.log( this.a );
@@ -78,10 +65,7 @@ var a = "global"; // `a` also property on global object
 
 doTest4( obj.test4 ); // hence this returns "global" instead of `2`
 
-</script>
-
-<!-- EXAMPLE 5: -->
-<script>
+//----- EXAMPLE 5: -----//
 
 function test5() {
   console.log( this.a );
@@ -95,6 +79,3 @@ var obj = {
 var a = "global"; // `a` also property on global object
 
 setTimeout( obj.test5, 100 ); // returns "global"
-</script>
-</head>
-</html>

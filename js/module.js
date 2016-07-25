@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
 var test = (function Module(id) {
   function change() {
     // modifying the public API
@@ -28,7 +23,3 @@ var test = (function Module(id) {
 test.identify(); 
 test.change();
 test.identify(); 
-
-</script>
-</head>
-</html>

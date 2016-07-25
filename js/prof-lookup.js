@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
 var contacts = [
   {
     "firstName": "Akira",
@@ -41,7 +36,3 @@ function lookUp(firstName, property) {
 }
 
 lookUp("Kristina", "likes");
-
-</script>
-</head>
-</html>

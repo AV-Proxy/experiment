@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
 function repeatString(str, num) {
-  
   var array = [];
   
   for (var i = 0; i < num; i++) {
@@ -17,8 +11,4 @@ function repeatString(str, num) {
 }
 
 repeatString("abc", 3);
-
-</script>
-</head>
-</html>
 

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-
-
 function mutation(arr) {
-  
   var string = arr[0].toLowerCase();
   var test = arr[1].toLowerCase();
   var final = 0;
@@ -24,8 +17,3 @@ function mutation(arr) {
 }
 
 mutation(["hello", "no"]);
-
-
-</script>
-</head>
-</html>
