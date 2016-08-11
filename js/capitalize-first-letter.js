@@ -1,15 +1,13 @@
-function capitalizeFirst(str) {
-  
-  str = str.toLowerCase();
-  str = str.split(' ');
-  
-  for (i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].substr(1);  
-  }
-  
-  str = str.join(" ");
-  
-  return str;    
+function titleCase(str) {
+  const array = str.toLowerCase().split(' ');
+  let string = '';
+
+  array.map(element => {
+    string += `${(element[0].toUpperCase())}${element.substr(1)} `;
+    return string;
+  });
+
+  return string.slice(0, string.length - 1);
 }
-  
-capitalizeFirst("i'm a little tea pot");
+
+titleCase('HERE IS MY HANDLE HERE IS MY SPOUT');

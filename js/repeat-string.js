@@ -1,14 +1,11 @@
 function repeatString(str, num) {
-  var array = [];
-  
-  for (var i = 0; i < num; i++) {
+  const array = [];
+
+  for (let i = 0; i < num; i++) {
     array.push(str);
   }
-  
-  var myVar = array.join('');
-  
-  return myVar;
+
+  return array.join('');
 }
 
-repeatString("abc", 3);
-
+repeatString('abc', 3);

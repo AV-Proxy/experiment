@@ -1,30 +1,29 @@
 function diffArray(arr1, arr2) {
-  var newArr = [];
- 
+  const array = [];
+
   if (arr1.length < arr2.length) {
-    for (var i = 0; i < arr2.length; i++) {
-      var test1 = arr1.indexOf(arr2[i]);
-      
-      if (test1 < 0) {
-        newArr.push(arr2[i]);
-      }
-    }
+    arr2.map(element => {
+      const a = arr1.indexOf(element);
+
+      if (a < 0) { array.push(element); }
+
+      return array;
+    });
   } else if (arr1.length >= arr2.length) {
-    for (var j = 0; j < arr1.length; j++) {
-      var test2 = arr2.indexOf(arr1[j]);
-      var test3 = arr1.indexOf(arr2[j]);
-      
-      if (test2 < 0) {
-        newArr.push(arr1[j]);
-      }
-      if (test3 < 0) {
-        newArr.push(arr2[j]);
-      }
-    }
+    arr1.map((element, index) => {
+      const b = arr2.indexOf(element);
+      const c = arr1.indexOf(arr2[index]);
+
+      if (b < 0) { array.push(element); }
+      if (c < 0) { array.push(arr2[index]); }
+
+      return array;
+    });
   }
-  
-  return newArr.filter(function(v) { return !!v; });
+
+  return array.filter(v => !!v);
 }
 
 
-diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+diffArray(['diorite', 'andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'],
+          ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']);

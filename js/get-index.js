@@ -1,12 +1,14 @@
 function getIndexToIns(arr, num) {
-  var test = 0;
-  arr = arr.sort();
+  const array = arr.sort();
+  let test = 0;
 
-  for (var i = 0; i < arr.length; i++) {
-    if (num > arr[i]) {
-      test ++;
+  array.map(element => {
+    if (num > element) {
+      test++;
     }
-  }
+    return test;
+  });
+
   return test;
 }
 

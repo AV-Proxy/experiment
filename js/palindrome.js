@@ -1,15 +1,12 @@
 function palindrome(str) {
-  str = str.replace(/[.*+?^${}()|[\]\\,_;:-]/g, '');
-  str = str.replace(/\s/g, '');
-  str = str.toLowerCase();
-  
-  var newStr = str.split('').reverse().join('');
-  
-  if (newStr == str) {
+  const str2 = str.replace(/[.*+?^${}()|[\]\\,_;:-]/g, '').replace(/\s/g, '').toLowerCase();
+  const newStr = str2.split('').reverse().join('');
+
+  if (newStr === str2) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
-console.log(palindrome("My age is 0, 0 si ega ym."));
+palindrome('My age is 0, 0 si ega ym.');

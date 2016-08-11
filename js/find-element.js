@@ -1,18 +1,16 @@
 function findElement(arr, func) {
-  var num = 0;
-  
-  var array = [];
-  
-  for (var i = 0; i < arr.length; i++) {
-    if (func([arr[i]]) === true) {
+  let num = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (func([arr[i]])) {
       num = arr[i];
       break;
     } else {
       num = undefined;
     }
   }
-  
+
   return num;
 }
 
-findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+findElement([1, 2, 3, 4], num => num % 2 === 0);

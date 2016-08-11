@@ -1,27 +1,25 @@
-
 function missingLetter(str) {
-  var array = [];
-  var missing = [];
-  
-  for (var i = 0; i < str.length; i++) {
-    array.push(str.charCodeAt(i)); 
+  const array = [];
+  const missing = [];
+
+  for (let i = 0; i < str.length; i++) {
+    array.push(str.charCodeAt(i));
   }
-  
-  for (var j = 0; j < array.length; j++) {
-    if ((array[j+1] - array[j]) !== 1) {
-      missing.push(array[j]+1);
+
+  array.map((item, index) => {
+    if ((array[index + 1] - item) !== 1) {
+      missing.push(array[index + 1] - 1);
     }
-  }
-  
+    return missing;
+  });
+
   missing.pop();
-  
+
   if (missing.length !== 0) {
-    missing = String.fromCharCode(missing);
-  } else {
-    missing = undefined;
+    return String.fromCharCode(missing);
   }
-  
-  return missing;
+
+  return undefined;
 }
 
-missingLetter("bcdf");
+missingLetter('bcdf');

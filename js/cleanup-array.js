@@ -1,12 +1,12 @@
 function cleanUp(arr) {
-  var newArray = [];
-  
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-      newArray.push(arr[i]);
-    }
-  }
+  const newArray = [];
+
+  arr.map(element => {
+    if (element) { newArray.push(element); }
+    return newArray;
+  });
+
   return newArray;
 }
 
-cleanUp([7, "ate", "", false, 9]);
+cleanUp([7, 'ate', '', false, 9]);

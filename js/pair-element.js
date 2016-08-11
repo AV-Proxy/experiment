@@ -1,26 +1,24 @@
 function pairElement(str) {
-  var array =  str.split('');
-  var temp = [];
-  var final = [];
-  
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] === 'G') {
-      array[i] = 'GC';
-    } else if (array[i] === 'C') {
-      array[i] = 'CG';
-    } else if (array[i] === 'A') {
-      array[i] = 'AT';
-    } else if (array[i] === 'T') {
-      array[i] = 'TA';
+  const array = str.split('');
+  const temp = [];
+  const final = [];
+
+  array.map(element => {
+    if (element === 'G') {
+      temp.push('GC');
+    } else if (element === 'C') {
+      temp.push('CG');
+    } else if (element === 'A') {
+      temp.push('AT');
+    } else if (element === 'T') {
+      temp.push('TA');
     }
-  }
-  
-  for (var j = 0; j < array.length; j++) {
-    temp = array[j].split("");
-    final.push(temp);
-  }
-  
+    return temp;
+  });
+
+  temp.map(element => final.push(element.split('')));
+
   return final;
 }
 
-pairElement("ATCGA");
+pairElement('ATCGA');

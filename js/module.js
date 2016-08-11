@@ -1,25 +1,16 @@
-var test = (function Module(id) {
-  function change() {
-    // modifying the public API
-    publicAPI.identify = identify2;
-  }
-
-  function identify1() {
-    console.log( id );
-  }
-
+const test = (function Module(id) {
   function identify2() {
-    console.log( id.toUpperCase() );
+    console.log(id.toUpperCase());
   }
 
-  var publicAPI = {
-    change: change,
-    identify: identify1
+  const publicAPI = {
+    change() { publicAPI.identify = identify2; },
+    identify() { console.log(id); },
   };
 
   return publicAPI;
-})( "test Module" );
+}('test Module'));
 
-test.identify(); 
+test.identify();
 test.change();
-test.identify(); 
+test.identify();
