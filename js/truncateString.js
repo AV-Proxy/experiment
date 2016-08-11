@@ -1,15 +1,13 @@
 function truncateString(str, num) {
-  var newArr = [];
-  
   if ((num > 3) && (num < str.length)) {
-    newArr = str.slice(0, num - 3);
-    return newArr + "...";
+    return `${str.slice(0, num - 3)}...`;
   } else if (num < 3) {
-    newArr = str.slice(0, num);
-    return newArr + "...";
+    return `${str.slice(0, num)}...`;
   } else if (num >= str.length) {
-    return str; 
+    return str;
   }
+
+  return str;
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 11);
+truncateString('A-tisket a-tasket A green and yellow basket', 11);

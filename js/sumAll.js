@@ -1,19 +1,13 @@
 function sumAll(arr) {
-  var min = Math.min(arr[0], arr[1]);
-  var max = Math.max(arr[0], arr[1]);
-  var array = [];
-  
-  for (var i = min; i <= max; i++) {
+  const min = Math.min(arr[0], arr[1]);
+  const max = Math.max(arr[0], arr[1]);
+  const array = [];
+
+  for (let i = min; i <= max; i++) {
     array.push(i);
   }
-  
-  function sum(a, b) {
-    return a + b;
-  }
-  
-  array = array.reduce(sum);
-  
-  return array;
+
+  return array.reduce((a, b) => a + b);
 }
 
 sumAll([5, 10]);

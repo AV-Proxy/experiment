@@ -1,17 +1,17 @@
+function uniteUnique(...args) {
+  const temp = [];
+  let unique = [];
 
-function uniteUnique(arr) {
-  var temp = [];
-  
-  for (var i = 0; i < arguments.length; i++) {
-    for (var j = 0; j < arguments[i].length; j++) {
-      temp.push(arguments[i][j]);
-    }
-  }
-  
-  var unique = temp.filter(function(elem, index, self) {
-    return index == self.indexOf(elem);
+  args.forEach(element => {
+    element.map(i => ({
+      temp: temp.push(i),
+    }));
   });
-  
+
+  unique = temp.filter((elem, index, self) => ({
+    index: self.indexOf(elem),
+  }));
+
   return unique;
 }
 
