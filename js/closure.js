@@ -1,71 +1,66 @@
-//--------- EXAMPLE 1: ---------
+// EXAMPLE 1:
 function test1() {
-  var a = 2;
-  
+  let a = 2;
+
   function test2() {
-    console.log( a );
+    console.log(a);
   }
+
   return test2;
 }
 
-var test3 = test1();
+let test3 = test1();
 test3();
-//------------------------------
 
-
-//-------- EXAMPLE 2: ----------
-var fn;
+// EXAMPLE 2:
+let fn;
 
 function aaa() {
-  var a = 2;
+  let a = 2;
 
   function bbb() {
-    console.log( a );
+    console.log(a);
   }
+
   fn = bbb;
 }
 
 function ccc() {
-    fn();
+  fn();
 }
 
 aaa();
 ccc();
-//------------------------------
 
-
-//--------- EXAMPLE 3: ---------
+// EXAMPLE 3:
 function wait(msg) {
-  setTimeout( function timer() {
-    console.log( msg );
+  setTimeout(function timer() {
+    console.log(msg);
   }, 1000 );
 }
 
-wait( "Hello, closure!" );
-//------------------------------
+wait("Hello, closure!");
 
-
-//--------- EXAMPLE 4: ---------
+// EXAMPLE 4:
 function Module() {
-  var something = "cool";
-  var another = [1, 2, 3];
+  let something = "cool";
+  let another = [1, 2, 3];
 
   function doSomething() {
-    console.log( something );
+    console.log(something);
   }
 
   function doAnother() {
-    console.log( another.join( " ! " ) );
+    console.log(another.join("!"));
   }
 
   return {
     doSomething: doSomething,
-    doAnother: doAnother
+    doAnother: doAnother,
   };
 }
 
-var foo = Module();
+let foo = Module();
 
-foo.doSomething(); 
-foo.doAnother(); 
-//------------------------------
+foo.doSomething();
+foo.doAnother();
