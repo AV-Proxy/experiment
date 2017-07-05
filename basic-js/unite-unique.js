@@ -1,18 +1,9 @@
-function uniteUnique(...args) {
-  const temp = [];
-  let unique = [];
+function uniteUnique(arr) {
+  let items = Array.prototype.slice.call(arguments).reduce((a,b) => a.concat(b));
+  let items2 = [...arguments].reduce((a,b) => a.concat(b));
+  let items3 = Array.from(arguments).reduce((a,b) => a.concat(b));
 
-  args.forEach(element => {
-    element.map(i => ({
-      temp: temp.push(i),
-    }));
-  });
-
-  unique = temp.filter((elem, index, self) => ({
-    index: self.indexOf(elem),
-  }));
-
-  return unique;
+  return items3.filter((item, pos) => items.indexOf(item) === pos);
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, [1]], [4, 7, 8]);
