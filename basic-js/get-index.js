@@ -1,15 +1,11 @@
 function getIndexToIns(arr, num) {
-  const array = arr.sort();
-  let test = 0;
-
-  array.map(element => {
-    if (num > element) {
-      test++;
+  return arr.sort().reduce((sum, value, index) => {
+    if (num > value) {
+      sum++
     }
-    return test;
-  });
 
-  return test;
+    return sum;
+  }, 0);
 }
 
-getIndexToIns([40, 70, 60], 50);
+console.log(getIndexToIns([40, 70, 60, 30, 10, 90, 80], 50));

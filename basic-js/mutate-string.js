@@ -1,19 +1,11 @@
 function mutation(arr) {
-  const string = arr[0].toLowerCase();
-  const test = arr[1].toLowerCase();
-  let final = 0;
-
-  for (let i = 0; i < test.length; i++) {
-    if (string.indexOf(test[i]) === -1) {
-      final = -1;
+  return arr[1].split('').reduce((test, value, index) => {
+    if (arr[0].indexOf(value) === -1) {
+      test = false;
     }
-  }
 
-  if (final === -1) {
-    return false;
-  }
-
-  return true;
+    return test;
+  }, true);
 }
 
-mutation(['hello', 'no']);
+console.log(mutation(['hello', 'hell']));

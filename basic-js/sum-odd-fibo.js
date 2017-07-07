@@ -1,26 +1,42 @@
-function sumFibs(num) {
-  const fib = [];
-  const odd = [];
+// returns sum of 'num' number of fibonacci numbers
+function sumAllFib(num) {
+  var fib = [1, 1];
 
-  fib[0] = 0;
-  fib[1] = 1;
-
-  for (let i = 2; i <= num + 1; i++) {
-    fib[i] = fib[i - 2] + fib[i - 1];
-    if (fib[i] > num) {
-      break;
-    }
+  for (var i = 2; i < num; i++) {
+    fib.push(fib[i - 1] + fib[i - 2]);
   }
 
-  fib.shift();
-  fib.pop();
-
-  fib.map((element) => {
-    if ((element % 2) !== 0) { odd.push(element); }
-    return odd;
+  return fib.reduce(function(a,b) {
+    return a + b;
   });
-
-  return odd.reduce((a, b) => a + b);
 }
 
-sumFibs(10);
+// returns the sum of 'num' number of fibonacci numbers recursively
+function recursiveSumFib(num) {
+  if (num === 0) {
+    return 0;
+  }
+
+  if (num === 1) {
+    return 1;
+  }
+
+  return recursiveSumFib(num - 1) + recursiveSumFib(num - 2) + 1;
+}
+
+// returns the sum of all odd fibonacci numbers less than 'num'
+function sumOddFibLessThan(num) {
+  var fib = [1];
+
+  for (var i = 1; i <= num;) {
+    fib.push(i);
+    i = fib[fib.length - 1] + fib[fib.length - 2];
+  }
+
+  return fib.filter(function(elem) {return elem % 2 !== 0 })
+    .reduce(function(a, b) {return a + b});
+}
+
+console.log(sumAllFib(10));
+console.log(recursiveSumFib(10));
+console.log(sumOddFibLessThan(10));

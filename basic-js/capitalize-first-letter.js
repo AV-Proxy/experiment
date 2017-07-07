@@ -1,13 +1,9 @@
 function titleCase(str) {
-  const array = str.toLowerCase().split(' ');
-  let string = '';
-
-  array.map(element => {
-    string += `${(element[0].toUpperCase())}${element.substr(1)} `;
-    return string;
-  });
-
-  return string.slice(0, string.length - 1);
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(elem => `${elem[0].toUpperCase()}${elem.slice(1)}`)
+    .join(' ');
 }
 
-titleCase('HERE IS MY HANDLE HERE IS MY SPOUT');
+console.log(titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'));

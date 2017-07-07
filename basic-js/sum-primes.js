@@ -1,18 +1,20 @@
 function sumPrimes(num) {
-  const notPrimes = [];
-  const primes = [];
+  let arr = Array.apply(null, {length: num + 1}).map((elem, index) => index);
+  let arr2 = [...Array(num + 1).keys()];
+  let arr3 = Array.from(Array(num + 1).keys());
 
-  for (let i = 2; i <= num; i++) {
-    if (!notPrimes[i]) {
-      primes.push(i);
+  function isPrime(n) {
+    let m = Math.floor(Math.sqrt(n));
 
-      for (let j = i * 2; j <= num; j += i) {
-        notPrimes[j] = true;
-      }
+    while (m > 1) {
+      if (n % m === 0) return false;
+      m--;
     }
+
+    return true;
   }
 
-  return primes.reduce((a, b) => a + b);
+  return arr3.slice(2).filter(n => isPrime(n)).reduce((a,b) => a + b);
 }
 
 sumPrimes(977);

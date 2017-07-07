@@ -1,12 +1,5 @@
 function cleanUp(arr) {
-  const newArray = [];
-
-  arr.map(element => {
-    if (element) { newArray.push(element); }
-    return newArray;
-  });
-
-  return newArray;
+  return arr.filter(elem => !!elem);
 }
 
-cleanUp([7, 'ate', '', false, 9]);
+console.log(cleanUp([7, 'ate', '', false, 9]));
