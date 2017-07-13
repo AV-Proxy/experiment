@@ -1,19 +1,13 @@
 function translatePigLatin(str) {
-  let newStr = str;
-
   function isVowel(c) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(c) !== -1;
   }
+  let index = str.split('').reduce((test, elem, idx) => {
+    return isVowel(elem) && !test ? test = idx : test;
+  }, 0)
 
-  if (isVowel(str.charAt(0))) {
-    newStr = str + 'way';
-  } else {
-    let index = str.split('').findIndex(item => isVowel(item));
-
-    newStr = str.substr(index) + str.substr(0, index) + 'ay';
-  }
-
-  return newStr;
+  return isVowel(str.charAt(0)) ? `${str}way` : str.slice(index) + str.slice(0, index) + 'ay';
 }
 
-translatePigLatin('glove');
+console.log(translatePigLatin('love'));
+

@@ -22,10 +22,9 @@ function convertToRoman(num) {
       roman += key;
       number -= lookup[key];
     }
-    return roman;
   });
 
   return roman;
 }
 
-convertToRoman(36);
+console.log(convertToRoman(36));
